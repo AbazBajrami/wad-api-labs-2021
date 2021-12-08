@@ -9,7 +9,8 @@ const app = express();
 
 const port = process.env.PORT;
 
-app.use('/api/movies', moviesRouter);
+//app.use(express.json());
+app.use('/api/movies', express.json(), moviesRouter);
 
 app.listen(port, () => {
   console.info("Server running at " + port);
