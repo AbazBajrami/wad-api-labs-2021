@@ -24,12 +24,14 @@ router.get('/', (req, res) => {
 
 // Get all genres
 router.get('/', async (req, res) => {
-    const genres = await User.find();
-    res.status(200).json(users);
+    const genres = await Genre.find();
+    res.status(200).json(genres);
 });
 
-
-
-
+// Get all users
+router.get('/', async (req, res) => {
+    const users = await User.find();
+    res.status(200).json(users);
+});
 
 export default router;
