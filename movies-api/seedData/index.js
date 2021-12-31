@@ -30,7 +30,7 @@ async function loadUsers() {
 
 // deletes all movies documents in collection and inserts test data
 export async function loadMovies() {
-    console.log('load seed data');
+    console.log('load movie data');
     console.log(movies.length);
     try {
       await movieModel.deleteMany();
@@ -42,7 +42,7 @@ export async function loadMovies() {
   }
 
   export async function loadGenres() {
-    console.log('load seed data');
+    console.log('load genre data');
     console.log(genres.length);
     try {
       await Genre.deleteMany();
